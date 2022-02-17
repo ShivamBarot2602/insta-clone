@@ -1,6 +1,7 @@
 import React ,{Component} from "react";
 import Login from "./components/Login";
 import Posts from "./components/Posts";
+import Profile from "./components/Profile";
 // import {Routes, Route}from 'react-router-dom'
 import { BrowserRouter, Switch ,Route,Redirect} from "react-router-dom";
 
@@ -32,7 +33,10 @@ loggin = () => {
         <Route exact path="/" render={() => (
         
           this.state.userData ? (
+            <>
             <Posts check={this.state.userData} loggin={this.loggin}/>
+            {/* <Profile/> */}
+            </>
           ) : (
             <Login loggin={this.loggin} />
           )

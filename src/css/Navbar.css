@@ -1,16 +1,25 @@
 .navbar-brand{
     font-size:45px;
     font-weight: bold;
-    margin-left:400px;
+    margin-left:200px;
     font-family: 'Sacramento', cursive;
 }
 
 .navbar{
     background-color: white !important;
+    position: fixed;
+    z-index: 1;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    width:100%;
+    padding:0px !important;
+    /* bottom:40px; */
+    /* margin-bottom: 80px; */
 }
 
 .log-btn{
-    margin-right:400px;
+    margin-right:20rem;
     padding:12px 20px;
     background-color: none I !important;
     color:white !important;

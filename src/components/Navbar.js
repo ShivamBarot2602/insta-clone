@@ -13,13 +13,23 @@ class Navbar extends Component {
   }
 
   remove = (e) => {
-    localStorage.removeItem('User');
+    // localStorage.removeItem('User');
     // this.props.loggin();
-    this.setState({isUser : localStorage.getItem("User")})
+    // this.setState({isUser : localStorage.getItem("User")})
+    let text = "You will notbe able too see the comments";
+    if(window.confirm(text) == true)
+    {
+      localStorage.removeItem('User');
+      this.setState({isUser : localStorage.getItem("User")})
+      this.props.chk()
+    } else {
+
+    }
     // localStorage.removeItem('mail');
     // localStorage.removeItem('psswrd');
 
 }
+
 
 handleLogin = () => {
   this.props.loggin();
