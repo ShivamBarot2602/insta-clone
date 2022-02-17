@@ -150,7 +150,7 @@ export default class Posts extends Component {
                   {this.state.clicked === post.id && (localStorage.getItem("User")) ?
                     <div>
                       {
-                        comments.map(comment => <ul className="list"><div className="cmt-sec"><i className="far fa-user-circle"></i><li className="cmnt-per">{comment.body.slice(1, 20)}</li></div></ul>)
+                        comments.map(comment => <ul className="list"><div className="cmt-sec"><i className="far fa-user-circle"></i><li className="cmnt-per">{comment.body.slice(0, 20)}</li></div></ul>)
                       }
                       <input className="inpt" type="text" placeholder="Add a comment" onChange={this.onUserCmt}></input>
                       <Button className="add-cmt" variant="primary" onClick={this.addCmnts}>Add</Button>

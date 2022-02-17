@@ -112,6 +112,8 @@
 .cmt-sec .cmnt-per{
     font-size:18px !important;
     margin-bottom: 5px;
+    padding:5px;
+    /* width:100px; */
     /* margin-right:15px !important; */
 }
 
@@ -120,5 +122,6 @@
 }
 
 .inpt{
-    width:400px;
+    width:fit-content;
+    margin:auto !important;
 }
