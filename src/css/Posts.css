@@ -121,7 +121,25 @@
     list-style-type: none;
 }
 
+.cmt-add{
+    display:flex;
+    flex-direction: row;
+    /* margin:auto !important; */
+    justify-content: center;
+}
+
 .inpt{
-    width:fit-content;
-    margin:auto !important;
+    width:600px;
+    margin:0px 10px;
+    padding:5px;
+    border:none;
+}
+
+.inpt:focus{
+    outline: none;
+}
+
+.add-cmt{
+    margin :0px 10px 0px 5px;
+    /* padding:10px 20px; */
 }

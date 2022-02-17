@@ -7,16 +7,22 @@ class Navbar extends Component {
   constructor(props) {
     super(props)
   
-    // this.state = {
-    //    first
-    // }
+    this.state = {
+       isUser :localStorage.getItem("User")
+    }
   }
 
   remove = (e) => {
     localStorage.removeItem('User');
+    // this.props.loggin();
+    this.setState({isUser : localStorage.getItem("User")})
     // localStorage.removeItem('mail');
     // localStorage.removeItem('psswrd');
 
+}
+
+handleLogin = () => {
+  this.props.loggin();
 }
 
   render() {
@@ -55,7 +61,7 @@ class Navbar extends Component {
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form> */}
             {/* && this.props.logout */}
-            <Button className="log-btn" type="submit"  onClick={this.remove}><i class="fas fa-power-off"></i> Log out</Button>
+            <Button className="log-btn" type="submit"  onClick={this.state.isUser ? this.remove : this.handleLogin}><i class="fas fa-power-off"></i> {this.state.isUser ? <div className="lgd">Logout</div> : <div className="lgd">Login</div>}</Button>
           </div>
         </div>
       </nav>

@@ -15,4 +15,11 @@
     background-color: none I !important;
     color:white !important;
     border-radius:55px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lgd{
+    margin:0px 5px 3px 5px;
 }

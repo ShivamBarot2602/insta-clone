@@ -115,7 +115,7 @@ export default class Posts extends Component {
     return (
 
       <div>
-        <Navbar />
+        <Navbar loggin = {this.props.loggin} />
         {posts.length && img.length ? posts.map((post, index) => {
           // console.log(index)
           const postImg = img[index];
@@ -152,8 +152,11 @@ export default class Posts extends Component {
                       {
                         comments.map(comment => <ul className="list"><div className="cmt-sec"><i className="far fa-user-circle"></i><li className="cmnt-per">{comment.body.slice(0, 20)}</li></div></ul>)
                       }
-                      <input className="inpt" type="text" placeholder="Add a comment" onChange={this.onUserCmt}></input>
+                       <hr/>
+                      <div className="cmt-add">
+                       <input className="inpt" type="text" placeholder="Add a comment" onChange={this.onUserCmt}></input>
                       <Button className="add-cmt" variant="primary" onClick={this.addCmnts}>Add</Button>
+                      </div>
                       </div>
                       
                      : <></>}
