@@ -44,18 +44,9 @@ export class Profile extends Component {
     retrieveValues = () => {
         var arr = JSON.parse(localStorage.getItem('User'));
         console.log(arr)
-        // arr.forEach(function(obj) {
-
-        //     const nma = obj.user
-        //   console.log(obj.user);
-        //   console.log(obj.mail);
-        //   console.log(obj.psswrd);
-        // });
-        // return nma
     }
 
     render() {
-        // console.log(this.props.lggin)
         return (
             <>
                 <div className="prf-sec">
@@ -66,7 +57,7 @@ export class Profile extends Component {
                         </div>
                         <div className="prf-dtls">
                             {/* <div className="usr-1" >{localStorage.getItem('User') ? JSON.parse(localStorage.getItem('User')).user : "No User"}</div>
-                    <div className="dtls-1">{localStorage.getItem('User') ? JSON.parse(localStorage.getItem('User')).mail : "No User"}</div> */}
+                             <div className="dtls-1">{localStorage.getItem('User') ? JSON.parse(localStorage.getItem('User')).mail : "No User"}</div> */}
                             <div className="usr-1" >{this.props.chck ? JSON.parse(localStorage.getItem('User')).user : "No User"}</div>
                             <div className="dtls-1">{this.props.chck ? JSON.parse(localStorage.getItem('User')).mail : "No User"}</div>
                         </div>
